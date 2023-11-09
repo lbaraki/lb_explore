@@ -130,8 +130,8 @@
     df_bar %>% 
       mutate(snu1 = fct_reorder(snu1, HTS_TST_POS)) %>% 
       ggplot(aes(x = HTS_TST_POS, y = snu1))+ 
-      geom_col()+
-      labs(title = "{snu1} leads in positive cases in {}",
+      geom_col(fill = glitr::old_rose, color = grey40k)+
+      labs(title = "{snu1} leads in positive cases in {fiscal year}",
            caption = glue("{msd_source}"),
            x = NULL, y = NULL)+
       scale_x_continuous(labels = comma) + 
